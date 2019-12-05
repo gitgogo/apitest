@@ -7,6 +7,7 @@
 import unittest
 import requests
 from config.apis import *
+from utx import *
 
 
 class CommonApiTest(unittest.TestCase):
@@ -18,6 +19,7 @@ class CommonApiTest(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
+    @tag(Tag.ALL)
     def test_historyday(self):
         url = host_common + history_day_api
         params = {"type": 0}
